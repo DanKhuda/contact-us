@@ -1,0 +1,44 @@
+@import "../../styles/colors";
+@import "../../styles/helpers";
+@import "../../styles/_mixins";
+
+.inputWrapper {
+  margin-bottom: rem(45);
+  &:focus-within {
+    .labelText {
+      color: $black;
+    }
+  }
+}
+
+.labelText {
+  color: $slateGray;
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: rem(20);
+  margin: 0;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid $slateGray;
+  outline: none;
+  color: $slateGray;
+  width: 100%;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: rem(20);
+
+  &:focus {
+    color: $black;
+    border-color: $black;
+  }
+
+  @include respond-to(xl) {
+    width: rem(278);
+  }
+}
+
+.fullField {
+  color: $black;
+}

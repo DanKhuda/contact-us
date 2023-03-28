@@ -1,0 +1,14 @@
+@import "../../styles/helpers";
+@import "../../styles/mixins";
+
+.title {
+  font-weight: 700;
+  font-size: rem(24);
+  line-height: rem(36);
+  margin: 0;
+
+  @include respond-to(sm) {
+    font-size: rem(40);
+    line-height: rem(60);
+  }
+}

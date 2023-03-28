@@ -1,0 +1,70 @@
+@import "../../styles/helpers";
+@import "../../styles/mixins";
+
+.contactForm {
+  width: 100%;
+  position: relative;
+  padding: rem(30) rem(21);
+  box-sizing: border-box;
+
+  @include respond-to(lg) {
+    padding: rem(60) rem(50);
+    width: 59%;
+    box-sizing: content-box;
+  }
+}
+
+.contactRow {
+  @include respond-to(lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.formText {
+  font-weight: 600;
+  font-size: rem(14);
+  line-height: rem(20);
+  font-size: rem(14);
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: rem(25);
+  padding-bottom: rem(64);
+
+  @include respond-to(lg) {
+    text-align: right;
+    padding-bottom: 0;
+  }
+}
+
+.radioButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include respond-to(xl) {
+    flex-wrap: nowrap;
+  }
+}
+
+.letter {
+  position: absolute;
+  right: 50%;
+  transform: translateX(0%);
+  bottom: rem(0);
+  width: rem(170);
+  height: rem(80);
+
+  @include respond-to(lg) {
+    right: rem(150);
+    width: rem(210);
+    height: rem(120);
+  }
+
+  @include respond-to(xl) {
+    height: rem(150);
+    width: rem(240);
+  }
+}

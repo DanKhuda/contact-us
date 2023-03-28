@@ -1,0 +1,73 @@
+@import "../../styles/_colors.scss";
+@import "../../styles/_helpers.scss";
+
+.menuItem {
+  margin: 0 rem(47) 0 0;
+  position: relative;
+
+  &:last-child {
+    margin: 0 rem(60) 0 0;
+  }
+
+  .link {
+    color: $black;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: rem(19);
+  }
+
+  &:hover {
+    .arrow {
+      transform: translateY(-0.1rem) rotate(135deg);
+    }
+  }
+
+  &:hover > .link {
+    color: $darkGray;
+  }
+
+  .subMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    z-index: 1;
+    background-color: $white;
+    padding: rem(9) rem(9) rem(9) rem(15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: rem(83);
+
+    .menuItem {
+      margin-bottom: rem(8);
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &:hover > .subMenu {
+    display: block;
+  }
+
+  .arrow {
+    display: inline-block;
+    width: rem(6);
+    height: rem(6);
+    border-left: rem(1) solid $black;
+    border-bottom: rem(1) solid $black;
+    transform: translateY(-0.2rem) rotate(-45deg);
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.active {
+  color: $black;
+  font-weight: 600;
+  font-size: rem(16);
+  line-height: rem(19);
+  text-decoration: none;
+}

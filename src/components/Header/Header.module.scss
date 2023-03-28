@@ -1,0 +1,38 @@
+@import "../../styles/global.scss";
+@import "../../styles/_helpers.scss";
+@import "../../styles/_mixins.scss";
+
+.header {
+  @extend .container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond-to(lg) {
+    padding: rem(41) rem(20);
+  }
+  padding: rem(29) rem(20);
+  margin: auto;
+}
+
+.navbar {
+  display: none;
+  @include respond-to(lg) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mobileNavbar {
+  display: block;
+  @include respond-to(lg) {
+    display: none;
+  }
+}
+
+.buttonContainer {
+  & > :first-child {
+    margin-right: rem(36);
+    padding: 0;
+  }
+}

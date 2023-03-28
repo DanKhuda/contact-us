@@ -1,0 +1,11 @@
+@import "../../styles/_helpers.scss";
+
+.circleIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(31);
+  height: rem(31);
+  border-radius: 50%;
+  border: 1px solid black;
+}

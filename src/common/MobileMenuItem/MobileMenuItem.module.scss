@@ -1,0 +1,42 @@
+@import "../../styles/_colors.scss";
+@import "../../styles/_helpers.scss";
+
+.mobileMenuItem {
+  padding-bottom: rem(30);
+}
+
+.mobileLink {
+  color: $white;
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: rem(16);
+  text-decoration: none;
+}
+
+.active {
+  @extend .mobileLink;
+  font-weight: 700;
+}
+
+.subMenu {
+  padding-left: rem(20);
+  .mobileMenuItem {
+    padding: rem(10) 0 0 0;
+  }
+}
+
+.arrow {
+  display: inline-block;
+  width: rem(6);
+  height: rem(6);
+  border-left: rem(1) solid $white;
+  border-bottom: rem(1) solid $white;
+  transform: translateY(-0.2rem) rotate(-45deg);
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.arrowOpen {
+  transform: translateY(-0.1rem) rotate(135deg);
+}

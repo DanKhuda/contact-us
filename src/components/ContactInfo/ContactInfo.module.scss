@@ -1,0 +1,64 @@
+@import "../../styles/colors";
+@import "../../styles/helpers";
+@import "../../styles/mixins";
+
+.contactInfo {
+  background: $black;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  @include respond-to(lg) {
+    padding: rem(40);
+    margin: rem(10);
+    width: 41%;
+    text-align: start;
+  }
+}
+
+.title {
+  color: $white;
+  font-weight: 600;
+  font-size: rem(28);
+  line-height: rem(42);
+}
+
+.socialIcons {
+  display: flex;
+  margin-top: rem(159);
+  justify-content: center;
+  padding-bottom: rem(25);
+
+  @include respond-to(lg) {
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+}
+
+.circleSmall {
+  position: absolute;
+  bottom: rem(0);
+  right: rem(30);
+  z-index: 1;
+  width: rem(60);
+  width: rem(60);
+  @include respond-to(md) {
+    width: rem(120);
+    width: rem(120);
+    right: rem(80);
+    bottom: rem(56);
+  }
+}
+
+.circleLarge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: rem(85);
+  height: rem(85);
+  @include respond-to(md) {
+    width: rem(170);
+    height: rem(170);
+  }
+}

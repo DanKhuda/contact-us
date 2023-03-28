@@ -1,0 +1,70 @@
+@import "../../styles/_colors.scss";
+@import "../../styles/_helpers.scss";
+
+.mobileMenuWrapper {
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $black;
+  transform: translateY(-100%);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out 0.2s, min-height 0s ease-in-out 0.3s;
+}
+
+.mobileMenuOpen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: rem(40);
+}
+
+.menu {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: rem(29) rem(20);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.mobileMenuButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.open {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.closeButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.close {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+}
+
+.mobileButtons {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rem(20);
+
+  & > :first-child {
+    padding-right: rem(36);
+  }
+}

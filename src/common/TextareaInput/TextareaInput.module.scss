@@ -1,0 +1,41 @@
+@import "../../styles/colors";
+@import "../../styles/helpers";
+@import "../../styles/_mixins";
+
+.textareaWrapper {
+  margin-top: rem(45);
+  &:focus-within {
+    .labelText {
+      color: $black;
+    }
+  }
+}
+
+.labelText {
+  color: $slateGray;
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: rem(20);
+  margin-bottom: rem(10);
+}
+
+.textarea {
+  border: none;
+  border-bottom: 1px solid $slateGray;
+  width: 100%;
+  resize: none;
+  outline: none;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: rem(10);
+  color: $slateGray;
+
+  &:focus {
+    color: $black;
+    border-color: $black;
+  }
+}
+
+.fullField {
+  color: $black;
+}

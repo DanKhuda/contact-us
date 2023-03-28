@@ -1,0 +1,41 @@
+@import "../../styles/colors";
+@import "../../styles/helpers";
+@import "../../styles/mixins";
+
+.subscriptionWrapper {
+  background-color: $darkSilver;
+  border-radius: rem(10);
+  padding: rem(14) rem(13) rem(21) rem(14);
+
+  @include respond-to(md) {
+    width: rem(304);
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: rem(18);
+  line-height: rem(26);
+  padding-bottom: rem(14);
+  margin: 0;
+}
+
+.input {
+  background-color: $slateSilver;
+  font-weight: 400;
+  color: $white;
+  font-size: rem(11);
+  line-height: rem(16);
+  border: none;
+  height: rem(35);
+  outline: none;
+  border-radius: rem(4) rem(4) 0 rem(4);
+}
+
+.note {
+  font-weight: 500;
+  font-size: rem(13);
+  line-height: rem(18);
+  opacity: 0.5;
+  padding: rem(19) rem(13) 0 0;
+}

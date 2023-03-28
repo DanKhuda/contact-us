@@ -1,0 +1,52 @@
+@import "../../styles/global.scss";
+@import "../../styles/helpers";
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.footer {
+  background-color: $black;
+  margin-top: rem(50);
+  @include respond-to(lg) {
+    padding: rem(41) rem(20);
+  }
+  padding: rem(29) rem(20);
+}
+
+.footerContent {
+  @extend .container;
+  color: $white;
+}
+
+.footerLogo {
+  text-align: center;
+  padding-top: rem(20);
+
+  @include respond-to(xl) {
+    padding-top: rem(80);
+  }
+}
+
+.line {
+  margin-top: rem(20);
+
+  @include respond-to(xl) {
+    margin-top: rem(45);
+  }
+}
+
+.footerText {
+  font-weight: 600;
+  font-size: rem(18);
+  line-height: rem(26);
+}
+
+.footerInfo {
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem(20);
+  flex-wrap: wrap;
+
+  @include respond-to(lg) {
+    flex-wrap: nowrap;
+  }
+}

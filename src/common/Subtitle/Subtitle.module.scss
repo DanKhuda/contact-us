@@ -1,0 +1,16 @@
+@import "../../styles/helpers";
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.subtitle {
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: rem(21);
+  margin: rem(10) 0 rem(50) 0;
+  color: $gray;
+
+  @include respond-to(sm) {
+    font-size: rem(18);
+    line-height: rem(27);
+  }
+}
